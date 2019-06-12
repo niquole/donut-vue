@@ -1,6 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
+import Menu from './views/Menu.vue'
+import Order from './views/Order.vue'
+import Contact from './views/Contact.vue'
+
+
+
 
 Vue.use(Router)
 
@@ -10,6 +16,21 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home
+    },
+    {
+      path: '/',
+      name: 'order',
+      component: Order
+    },
+    {
+      path: '/',
+      name: 'menu',
+      component: Menu
+    },
+    {
+      path: '/',
+      name: 'contact',
+      component: Contact
     },
     {
       path: '/about',
