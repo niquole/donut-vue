@@ -18,17 +18,17 @@ export default new Router({
       component: Home
     },
     {
-      path: '/',
+      path: '/order',
       name: 'order',
       component: Order
     },
     {
-      path: '/',
+      path: '/menu',
       name: 'menu',
       component: Menu
     },
     {
-      path: '/',
+      path: '/contact',
       name: 'contact',
       component: Contact
     },

@@ -2,7 +2,7 @@
   <v-app>
 
       <Header/>
-      <Home/>
+      <router-view></router-view>
   <Footer/>
   </v-app>
 </template>
@@ -17,7 +17,6 @@
 <script>
 import Header from './components/Header'
 import Footer from './components/Footer'
-import Home from './views/Home'
 
 
 
@@ -26,8 +25,7 @@ export default {
   name: 'App',
   components: {
     Header,
-    Footer,
-    Home
+    Footer
 
   },
   data () {
