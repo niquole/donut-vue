@@ -9,7 +9,7 @@
 
 <style>
 #app {
-  background-color: rgb(194, 223, 197);
+  background-color: #fff;
   
 }
 </style>

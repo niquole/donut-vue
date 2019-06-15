@@ -1,7 +1,7 @@
 
 <template>
 <div>
-        <div v-for="(ingridient,i) in ingridients" v-bind:key="i">
+        <div v-for="(ingridient,i) in ingridients" v-bind:key="i" id="add">
         <v-btn @click="total(i)"> {{ ingridient.name }}  </v-btn>
      </div>
 
@@ -52,7 +52,6 @@ export default {
     methods: {
         total: function(a) {
             this.price += this.ingridients[a].price;
-            
         }
     }
 }
@@ -60,7 +59,12 @@ export default {
 
 
 <style lang="scss">
+
+div#add{
+    display: inline-block;
+    
 .v-btn {
-    display: inline;
+    text-align: center;
+}
 }
 </style>

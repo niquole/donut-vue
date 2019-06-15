@@ -8,8 +8,8 @@
       ></v-carousel-item>
     </v-carousel>
     <div id="buy">
-    <router-link to="/Order.vue">
-      <v-btn>ORDER NOW!!!</v-btn>
+    <router-link to="/Order">
+      <v-btn>ORDER NOW!</v-btn>
     </router-link>
     </div>
     
@@ -19,25 +19,27 @@
 
 <style lang="scss">
 .v-carousel {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
-  margin-top: 40px;
-  height: 700px !important;
+  margin: 0;
+  height: 800px !important;
 .v-window__container, .v-image {
-  height: 700px !important;
+  height: 800px !important;
 }
 }
 div#buy {
-  padding: 30px;
+  padding: 25px;
   // background-color: rgb(194, 223, 197);
   text-align: center;
   .v-btn {
     background-color: #D4F5F5;
     position: absolute;
-    width: 200px;
+    width: 160px;
     height: 60px;
     top: 65%;
     left: 45%;
+    margin-left: 10px;
+    padding-left: 10px;
   }
 }
 
@@ -49,16 +51,16 @@ div#buy {
       return {
         items: [
           {
-            src: 'https://assets.epicurious.com/photos/5ae74741f8542520401e0da6/2:1/w_1260%2Ch_630/giant-donut-cake-recipe-042718.jpg'
+            src: 'https://images2.minutemediacdn.com/image/upload/c_crop,h_1414,w_2101,x_10,y_0/v1554924835/shape/mentalfloss/88294-istock-905879330.jpg?itok=J3gVztV_'
           },
           {
-            src: 'https://donutbar.com/wp-content/uploads/2017/06/donut-bar-homers.png'
+            src: 'https://media.cntraveler.com/photos/59ca6488e11975084c5841ea/master/pass/Federal_160415_FEDERALdonuts64786.jpg'
           },
           {
-            src: 'https://mercatofoods.com/wp-content/uploads/2018/01/ddc27dfc-3459-4552-817e-eb2f12078a29.jpg'
+            src: 'https://cdn.pixabay.com/photo/2017/08/11/21/46/donuts-2632878_960_720.jpg'
           },
           {
-            src: 'https://www.pngkey.com/png/full/8-89387_image-doughnuts0987650-doughnuts-wiki-anime-donut-png.png'
+            src: 'http://www.minnesotamonthly.com/wp-content/uploads/sites/85/2018/05/gd-homepage_header-small-nologo.jpg'
           }
         ]
       }

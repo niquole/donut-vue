@@ -3,7 +3,7 @@
         <div class="header">
         <div id="logo">
         <router-link to="/">
-        <img src="https://cdn.pixilart.com/photos/large/22d5475f140abb9.png" alt="">            
+        <img src="https://cdn.pixabay.com/photo/2017/11/22/16/05/pug-2970827_960_720.png" alt="">            
         </router-link>
         </div>
     <div class="nav">
@@ -21,11 +21,12 @@ body {
     margin: 0;
 
 div#logo img {
-  width: 100px; 
+  width: 80px; 
+  margin: 5px;
 }
 
 .header {
-    background-color: rgb(212, 245, 245);
+    background-color: #fff;
 
 }
 div#logo {
