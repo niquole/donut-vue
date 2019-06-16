@@ -35,6 +35,9 @@ div#logo {
 
 }
 .nav {
+    border-bottom: 2px solid #FD8682;
+    box-shadow: 0 1em 2em -1em #FD8682;
+  padding-bottom: 10px;
   margin: 0;    
   list-style-type: none;
   text-align: center;
