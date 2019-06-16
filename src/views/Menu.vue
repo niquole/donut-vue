@@ -61,10 +61,10 @@ export default {
 
 
 <style lang="scss">
-.v-expansion-panel {
-    
-}
 .v-expansion-panel__header {
-    background-color: #C2DFC5;
+    background-color: #FD8682;
+}
+.v-card__text {
+    background-color: #fff;
 }
 </style>
