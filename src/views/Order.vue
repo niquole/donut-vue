@@ -152,7 +152,7 @@ export default {
         },
         reset: function() {
             this.price = 0;
-            this.step="1";
+            this.e1 = 1;
         },
         outpout: function() {
             this.ingridients.name;
@@ -161,6 +161,7 @@ export default {
         buy: function() {
             this.e1 = 1;
             this.price = 0;
+            this.h1 = "ADDED";
         }
     }
 }
