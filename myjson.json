@@ -1,0 +1,66 @@
+{
+    "dough": [
+        {
+        "image": "../assets/img/donut-base.png",
+        "name": "simple",
+        "price": 0.60
+        },
+        {
+        "image": "../assets/img/donut-choco-base1.png",
+        "name": "chocolate",
+        "price": 0.80
+        },
+         {
+            "image": "../assets/img/donut-straw-base.png",
+            "name": "Strawberry",
+            "price": 0.90
+        },
+         {
+            "image": "../assets/img/donut-base.png",
+            "name": "Vanilla",
+            "price": 0.90
+        }
+    ],
+    "ingridient": [
+        {
+           "name": "Milk Chocolate",
+            "price": 0.50
+        },
+        {
+            "name": "White Chocolate",
+            "price": 0.50
+        },
+        {
+            "name": "Dark Chocolate",
+            "price": 0.60
+        },
+        {
+            "name": "Strawberries",
+            "price": 0.70
+        },
+        {
+            "name": "Caramel",
+            "price": 0.30
+        }
+    ],
+    "filling": [
+
+        {
+            "name": "Chocolate",
+            "price": 0.60
+        },
+        {
+            "name": "Caramel",
+            "price": 0.40
+        },
+        {
+            "name": "Coconut",
+            "price": 0.80
+        },
+        {
+            "name": "Cherry",
+            "price": 0.30
+        }
+
+    ]
+}

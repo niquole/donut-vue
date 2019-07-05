@@ -14,11 +14,12 @@
 
     <v-stepper-items>
       <v-stepper-content step="1">
-        <v-card > <div v-for="(dought,i) in doughts" v-bind:key="i" id="fill">
-        <v-btn @click="total(i)"> {{ dought.name }}  </v-btn>
+        <v-card > 
+            <div v-for="(dough,i) in this.donuts.dough" v-bind:key="i" id="fill">
+            <v-btn @click="total(i)"> {{ dough.name }}  </v-btn>
+            <!-- <img v-for="image in images" v-bind:key="image" :src="dough.image"> -->
             </div>
-            <img id="dought" src="../assets/img/donut-base.png" alt="">
-            </v-card>
+        </v-card>
      <div>
          <h1>total: {{ price }} €</h1>
      </div>
@@ -35,7 +36,7 @@
           <v-card > <div v-for="(filling,i) in fillings" v-bind:key="i" id="fill" @click="outpout">
         <v-btn @click="total(i)"> {{ filling.name }}  </v-btn>
             </div>
-        <img id="filling" src="../assets/img/withchoco.png" alt="">
+        <img id="filling" src="http://jupiterdonuts.com/assets/images/donuts/filled-blueberry.png" alt="">
             </v-card>
      <div>
          <h1>total: {{ price }} €</h1>
@@ -54,7 +55,7 @@
        <v-card>
             <div v-for="(ingridient,i) in ingridients" v-bind:key="i" id="topings" @click="outpout">
         <v-btn @click="total(i)"> {{ ingridient.name }}  </v-btn>
-        <img id="topings" src="../assets/img/sprinkled.png" alt="">
+        <img id="topings" src="https://static1.squarespace.com/static/56d8a4ed04426221d4b69175/5b454b0588251b2395abd77f/5b454b05758d461d370a4c6b/1531269610591/BlueberryFilled.PNG" alt="">
         </div>
         </v-card>
 
@@ -75,84 +76,31 @@
 
 
 <script>
+import axios from 'axios';
+
 export default {
     name: "Order",
     data() {
         return {
-             e1: 0,
+            e1: 0,
+            urlApi: "https://api.myjson.com/bins/hn9xb",
             price: 0,
-            doughts: [
-                {
-                name: "normal",
-                price: 0.60
-                },
-                {
-                name: "chocolate",
-                price: 0.80
-                },
-                 {
-                name: "Crunchy",
-                price: 0.80
-                }, 
-                {
-                    name: "Vanilla",
-                    price: 0.70
-                },
-                 {
-                    name: "Caramel",
-                    price: 0.65
-                }
-            ],
-            ingridients: [
-                {
-                    name: "Milk Chocolate",
-                    price: 0.50
-                },
-                {
-                    name: "White Chocolate",
-                    price: 0.50
-                },
-                {
-                    name: "Dark Chocolate",
-                    price: 0.60
-                },
-                {
-                    name: "Strawberries",
-                    price: 0.70
-                },
-                {
-                    name: "Caramel",
-                    price: 0.30
-                },
-            ],
-            fillings: [
-                {
-                    name: "Chocolate",
-                    price: 0.60
-                },
-                {
-                    name: "Caramel",
-                    price: 0.40
-                },
-                {
-                    name: "Coconut",
-                    price: 0.80
-                },
-                {
-                    name: "Cherry",
-                    price: 0.30
-                }
-            ]
+            donuts: []
         }
+    },
+    mounted() {
+      axios.get(this.urlApi).then(response => {
+              this.donuts = response.data;
+      })
     },
     methods: {
         total: function(a) {
             this.price += this.ingridients[a].price;
             this.price += this.fillings[a].price;
+
         },
         reset: function() {
             this.price = 0;
-            this.step="1";
         },
         outpout: function() {
             this.ingridients.name;
@@ -161,13 +109,15 @@ export default {
         buy: function() {
             this.e1 = 1;
             this.price = 0;
+
         }
     }
-}
+}   
 </script>
 
 
 <style lang="scss">
+
 div#ingri{
     display: inline-block;
     text-align: center;
@@ -178,7 +128,9 @@ div#ingri{
     color: #fff;
     margin-bottom: 100px;
 }
+
 }
+
 div#fill {
     display: inline-block;
 .v-btn {
@@ -199,6 +151,7 @@ div#topings {
 }
 div {
     text-align: center;
+
 }
 span.primary {
     background-color: #FD8682 !important;
